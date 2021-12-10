@@ -199,7 +199,7 @@ function service_finder_title_separator($color = '') {
 	$titleseparator = (isset($service_finder_options['after-title-separator'])) ? esc_html($service_finder_options['after-title-separator']) : true;
 	$titleseparatoricon = (isset($service_finder_options['icon-between-devider']['url'])) ? esc_html($service_finder_options['icon-between-devider']['url']) : true;
 	if($titleseparator && service_finder_themestyle_for_plugin() != 'style-3'){
-	return '<div class="after-titile-line" style="background-image:url('.esc_url($titleseparatoricon).')"><span class="title-line-left" style="background-color:'.$color.'"></span><span class="title-line-right" style="background:'.$color.'"></span></div>';
+	return '<div class="after-titile-line"><span class="title-line-left" style="background-color:'.$color.'"></span></div>';
 	}else{
 	return '';
 	}

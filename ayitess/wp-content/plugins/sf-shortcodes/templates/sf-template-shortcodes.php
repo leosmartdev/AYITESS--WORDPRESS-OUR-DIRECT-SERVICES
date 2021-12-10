@@ -179,7 +179,6 @@ function service_finder_register_shortcodes() {
 			}else{
 				require plugin_dir_path(__FILE__) . '/how-it-works.php';
 			}	
-			
 			print_r($html);
 			return ob_get_clean();
 	}

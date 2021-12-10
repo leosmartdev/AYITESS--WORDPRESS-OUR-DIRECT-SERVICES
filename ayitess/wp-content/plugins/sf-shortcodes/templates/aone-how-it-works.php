@@ -24,18 +24,20 @@ $curverightcolor = (!empty($service_finder_options['how-works-right-curve-color'
 
 $title = (!empty($service_finder_options['shortcode-how-works-title'])) ? esc_html($service_finder_options['shortcode-how-works-title']) : '';
 $tagline = (!empty($service_finder_options['shortcode-how-works-tagline'])) ? wp_kses_post($service_finder_options['shortcode-how-works-tagline']) : '';
+$tagline = "Take a look at the best work we've done by simply clicking the link below.";
 $titlecolor = (!empty($service_finder_options['shortcode-how-works-title-color'])) ? esc_html($service_finder_options['shortcode-how-works-title-color']) : '';
 $taglinecolor = (!empty($service_finder_options['shortcode-how-works-tagline-color'])) ? esc_html($service_finder_options['shortcode-how-works-tagline-color']) : '';
+$taglinecolor = "#969696";
 $dividercolor = (!empty($service_finder_options['shortcode-how-works-divider-color'])) ? esc_html($service_finder_options['shortcode-how-works-divider-color']) : '';
-
 if(service_finder_themestyle_for_plugin() == 'style-2'){
 $html = '<section class="section-full text-center bg-white" style="background-image:url('.esc_url($imgurl).');background-attachment: '.$bgattachment.'">
             <div class="container">
             
             	<div class="section-head">
-                    <h2 style="color:'.$titlecolor.'">'.esc_html($title).'</h2>
+            			<div><span style="color: #FD6F63; font-family: Open Sans;">BEST SERVICES</span></div>
+                    <h2 style="color:#323232; font-family: Open Sans; font-size: 40px;">'."How Ayitess Work".'</h2>
 					'.service_finder_title_separator($dividercolor).'
-					<div class="sf-tagile-outer" style="color:'.esc_attr($taglinecolor).'">'.wp_kses_post($tagline).'</div>
+					<div class="sf-tagile-outer" style="color:'.esc_attr($taglinecolor).'; font-size: 16px; max-width: 420px; overflow-wrap: break-word; font-family: Open Sans;">'.wp_kses_post($tagline).'</div>
                 </div>
                     
                 <div class="section-content">
@@ -61,12 +63,11 @@ $html = '<section class="section-full text-center bg-white" style="background-im
 						{
 						$html .= '<div class="'.esc_attr($boxwidth).'">
                           <div class="sf-how-work padding-lr-40 equal-col">
-                                <div class="sf-icon-xl margin-b-20">
+                                <div class="sf-icon-xl margin-b-20" style="display: flex">
                                     <img src="'.esc_url($stepicon).'" width="139" height="140" alt="">
-                                    <span class="sf-no-step">'.esc_html($stepnumber).'</span>
                                 </div>
-                                <h4 class="sf-tilte" style="color:'.esc_attr($taglinecolor).'">'.esc_html($steptitle).'</h4>
-                                <p style="color:'.esc_attr($taglinecolor).'">'.$stepcontent.'</p>
+                                <h4 class="sf-tilte" style="text-align:left; color:'.esc_attr($taglinecolor).'">'.esc_html($steptitle).'</h4>
+                                <p style="text-align:left; color:'.esc_attr($taglinecolor).'">'.$stepcontent.'</p>
                           </div>
                         </div>';
 						}

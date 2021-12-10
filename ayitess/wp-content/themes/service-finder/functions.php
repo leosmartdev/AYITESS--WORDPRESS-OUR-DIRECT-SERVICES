@@ -157,6 +157,8 @@ function service_finder_theme_setup() {
 	add_theme_support( 'woocommerce' );
 	
 }
+
+
 add_action( 'after_setup_theme', 'service_finder_theme_setup' );
 
 /*Filter to change from emailid in wpmail function*/
@@ -1112,3 +1114,4 @@ function service_finder_blockusers_init() {
 		exit;
 	}
 }
+// var_dump("expression"); exit;

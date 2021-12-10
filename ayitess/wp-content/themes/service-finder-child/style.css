@@ -248,18 +248,19 @@ Text Domain:  servicefinderchild
  }
  .title-line-left,
  .title-line-right {
-     width: 50px;
-     height: 2px;
-     background: #a7a7a7;
+     width: 136px;
+     height: 4px;
+     border-radius: 2px;
+     background-color: #0A6259 !important;
      position: absolute;
      top: 10px;
  }
- .title-line-left {
+/* .title-line-left {
      left:-55px;
  }
  .title-line-right {
      right:-55px;
- }
+ }*/
  .line {
      position: relative;
  }

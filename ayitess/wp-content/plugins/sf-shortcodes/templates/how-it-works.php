@@ -18,7 +18,6 @@ $bgopacity = (!empty($service_finder_options['how-works-bg-opacity'])) ? $servic
 $bgopacity = ($bgopacity > 0) ? $bgopacity : ''; 
 $curveleftcolor = (!empty($service_finder_options['how-works-left-curve-color'])) ? $service_finder_options['how-works-left-curve-color'] : '';
 $curverightcolor = (!empty($service_finder_options['how-works-right-curve-color'])) ? $service_finder_options['how-works-right-curve-color'] : '';
-
 if(service_finder_themestyle_for_plugin() == 'style-2'){
 $html = '<section class="section-full text-center bg-white" style="background-image:url('.esc_url($imgurl).');background-attachment: '.$bgattachment.'">
             <div class="container">

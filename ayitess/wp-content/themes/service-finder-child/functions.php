@@ -19,6 +19,3 @@ function my_theme_enqueue_styles() {
 //     array( 'service_finder-css-style' ), wp_get_theme()->get('Version') );
 // }
 // add_action( 'wp_enqueue_scripts', 'service_finder-css-style');
-
-var_dump(get_template_directory());
-require get_template_directory() . '/lib/genral-functions.php'; //Genral Functions

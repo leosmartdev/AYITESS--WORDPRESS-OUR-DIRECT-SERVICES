@@ -4426,11 +4426,11 @@ header style [5] & header black overlay
 /*=============================
 header style [7] [transparent no top bar]
 ==============================*/
-.header-style7 .extra-nav .extra-cell a.btn { background-color: transparent; color: #ffffff; border: 2px solid #ffffff; margin-left: 5px; margin-right: 5px; padding: 14px 31.5px; margin-top: -8px; }
+.header-style7 .extra-nav .extra-cell a.btn { background-color: transparent; color: #ffffff; border: 2px solid #ffffff; margin-left: 5px; margin-right: 5px; padding: 14px 31.5px; margin-top: -8px; border-radius: 4px;}
 
 .header-style7 .extra-nav .extra-cell a.btn[data-action=login] { background-color: #ef3c55;}
 
- .header-style7.is-sticky .extra-nav .extra-cell a.btn {  background-color: transparent;  color: #FFFFFF;  border: 2px solid #FFFFFF; } 
+ .header-style7.is-sticky .extra-nav .extra-cell a.btn {  background-color: transparent;  color: #FFFFFF;  border: 2px solid #FFFFFF;} 
  .header-style7.is-sticky .extra-nav .extra-cell a.btn[data-action=login] {
      background-color: #ef3c55;
  }
@@ -4574,9 +4574,20 @@ Nav left slide css
  }
  .sf-bnr-text strong {
      display: block;
-     font-weight:700; font-size:72px; line-height:90px; color:#ffffff;  }
+     font-weight:700; font-size:60px; line-height:80px; color:#ffffff;  
+     margin-left: -100px;
+     overflow-wrap: break-word;
+     width: 555px;
+     text-align: left;
+    }
  .sf-bnr-text span {
-     font-family:Raleway; font-weight:400; font-size:24px; line-height:36px; color:#ffffff;  }
+     font-family:Raleway; font-weight:400; font-size:16px; line-height:32px; color:#ffffff;  
+     overflow-wrap: break-word;
+     max-width: 518px;
+     display: block;
+     margin-left: -100px;
+     text-align: left;
+    }
  @media only screen and (max-width: 1440px) {
  .sf-bnr-text {
      top: 30%;
@@ -4784,7 +4795,13 @@ Nav left slide css
  .sf-find-bar .type-address .form-control,
  .sf-find-bar-inr .type-address .form-control {
      border-color: #fff;
+     width : 169px;
+     /* height: 61px; */
+     border-radius: 4px;
+     /* display: none; */
  }
+
+
  .sf-find-bar .search-col-8,
  .sf-find-bar-inr .search-col-8 { width: 12.444% ; }
  .sf-find-bar .search-col-7,
@@ -10936,6 +10953,13 @@ Nav left slide css
  .content-admin-area {  margin-left: 240px;  padding:70px 0 0;	background-color:#F6F6FA; min-height:100vh;}
  .content-admin-main .panel { box-shadow:0 0 12px 0 rgba(0,0,0,.06); -webkit-box-shadow:0 0 12px 0 rgba(0,0,0,.06);}
  .sf-form-control { border:1px solid #dbdbdb; height:40px; box-shadow:0 1px 3px 0 rgba(0,0,0,.06); -webkit-box-shadow:0 1px 3px 0 rgba(0,0,0,.06);}
+ /* .sf-form-control[id=searchAddress] {
+    width: 169px;
+    height: 61px;
+    border-radius: 4px;
+ } */
+
+ 
  .content-admin-main textarea.form-control { height:auto; }
  .sf-select-box > .dropdown-toggle {  height:40px; }
  .content-admin-main .bootstrap-select div.dropdown-menu ul li a { padding:10px 15px; } 

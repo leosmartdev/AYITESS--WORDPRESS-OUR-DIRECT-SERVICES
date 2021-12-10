@@ -12,6 +12,9 @@ function my_theme_enqueue_styles() {
         $theme->get('Version') // this only works if you have Version in the style header
     );
 }
+
+// var_dump(get_stylesheet_uri()); exit;
+wp_register_style('service_finder-css-rounded', get_stylesheet_uri() . '/inc/css/rounded.css','',null);
 /* enqueue scripts and style from parent theme */
     
 // function servicefinder_styles() {

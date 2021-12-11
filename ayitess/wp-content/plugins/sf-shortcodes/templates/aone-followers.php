@@ -7,7 +7,6 @@
 *	Email: contact@aonetheme.com
 *
 ******************************************************************************/
-
 $service_finder_options = get_option('service_finder_options');
 $wpdb = service_finder_shortcode_global_vars('wpdb');
 ?>
@@ -115,12 +114,25 @@ $videothumb = '';
 </section>
 <?php
 $html = ob_get_clean();
-
 }else{
-$html = '<div class="section-full sf-overlay-wrapper text-center providers-follow" style="background:url('.esc_url($imgurl).') center '.$bgattachment.' no-repeat;">
-  <div class="container">
-    <div class="w-t-element"> <strong class="sf-title" style="color:'.esc_attr($followerstextcolor).'">'.str_replace("%TOTAL-PROVIDERS%",'<span>'.$total.'</span>',$title).'</strong>
-      <div class="sf-follow-text" style="color:'.esc_attr($followerstextcolor).'">'.$content.'</div>
+$bgcolor = "#153056";
+$bgopacity = 1;
+$content_first = "GET YOUR PLACE CLEANED. IT’S SIMPLE";
+$button_color = "#EF3C55";
+$content = "We make the cleaning experience easier for you our goal is to make cleaning enjoyable again, and to give you your free time back so that you can concentrate on what’s important.";
+$html = '<div class="section-full sf-overlay-wrapper text-center providers-follow" style="padding-top: 39.54px; padding-bottom: 41.43px; background-color: '. $bgcolor . ';">
+  <div class="container" style="display: flex; font-family: Open Sans;">
+    <div id = "follow_img" class= "sf-providers-follow-img">
+        <div class = "sf-providers-follow-radius-rectangle"></div>
+    </div>
+    <div class="w-t-element" style="padding-left: 81px; padding-top: 104.67px; display: flex; flex-direction: column; float: right;">
+        <div style="text-align: left; float:right;font-size:16px; ">' . $content_first . '</div>
+        <div style="float:right; width: 432.81px;"> <strong class="sf-title" style="font-size: 40px; text-align:left; color:'.esc_attr($followerstextcolor).'">'.str_replace("%TOTAL-PROVIDERS%",'<span>'.$total.'</span>',$title).'</strong>
+        </div>
+        <div class="sf-follow-text" style="padding:0; font-size: 16px; text-align:left; float: right; width: 486px; color:'.esc_attr($followerstextcolor).'">'.$content.'</div>
+        <div style="text-align: left; padding-top: 123px;">
+            <input type="button" value="Learn More ->" style="border: none; background-color:'.$button_color.'; width: 170px; height: 56px; border-radius: 4px;">
+        </div>
     </div>
   </div>
   <div class="sf-overlay-main" style="opacity:'.$bgopacity.'; background-color:'.$bgcolor.'">

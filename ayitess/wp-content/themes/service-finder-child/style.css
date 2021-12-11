@@ -6600,6 +6600,20 @@ Nav left slide css
      margin-bottom: 5px;
      display: block;
  }
+.sf-providers-follow-img {
+     width: 583px;
+     height: 582px;
+     background-image: url(inc/images/background/bg6.png);
+     border-radius: 300px 0px 0px 0px;
+}
+
+.sf-providers-follow-radius-rectangle {
+     width: 102px;
+     height: 102px;
+     background-color: #EF3C55;
+     border-radius: 0px 0px 1000px 0px;     
+}
+
  /*== > provider box thum height manage ==*/
  .sf-listing-grid-4 .sf-thum-bx {
      min-height: 203px;

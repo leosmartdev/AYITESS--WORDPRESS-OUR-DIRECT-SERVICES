@@ -259,7 +259,6 @@
 	
 	//Load More Categories
 	jQuery(document).on('click','.show_more_v2',function(){
-														 
         var offset = jQuery(this).attr('data-offset');
 		var subcat = jQuery(this).attr('data-subcat');
 		var catarr = jQuery(this).attr('data-catarr');
@@ -273,7 +272,6 @@
 			  "catarr": catarr,
 			  "subcat": subcat
 			};
-			
 		jQuery.ajax({
             type:'POST',
             url:ajaxurl,

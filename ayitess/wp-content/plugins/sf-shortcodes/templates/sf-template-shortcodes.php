@@ -675,13 +675,13 @@ function service_finder_register_shortcodes() {
 			), $atts );
 			
 			
-			$fromthemeoption = service_finder_manage_shortcode();
-			if($fromthemeoption == 'yes' || service_finder_check_new_client_for_shortcode())
-			{
-				require plugin_dir_path(__FILE__) . '/aone-categories-v2.php';
-			}else{
+			// $fromthemeoption = service_finder_manage_shortcode();
+			// if($fromthemeoption == 'yes' || service_finder_check_new_client_for_shortcode())
+			// {
+			// 	require plugin_dir_path(__FILE__) . '/aone-categories-v2.php';
+			// }else{
 				require plugin_dir_path(__FILE__) . '/categories-v2.php';
-			}
+			// }
 			
 			print_r($html);
 			return ob_get_clean();

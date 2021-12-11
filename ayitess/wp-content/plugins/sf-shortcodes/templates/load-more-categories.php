@@ -284,23 +284,23 @@ global $service_finder_options;
 $nocaticon = ($catimage == "") ? 'no-cat-icon' : '';
 $imgtag = '';
 if($catimage != ""){
-	  $imgtag = '<img src="'.esc_url($catimage).'" width="80" height="80" alt="'.esc_attr($catdetails->name).'">';
+	  $imgtag = '<img src="'.esc_url($catimage).'" width="80" height="80" style="min-width: 64px; min-height: 64px;" alt="'.esc_attr($catdetails->name).'">';
 }
 
 $excerpt = '';
 
 if($showdes == 'yes'){
-	$excerpt = '<p>'.nl2br(service_finder_getExcerpts($catdetails->description,0,60)).'</p>';
+	$excerpt = '<p> style="max-width: 296px; height: 86px; font-size: 16px;" '.nl2br(service_finder_getExcerpts($catdetails->description,0,60)).'</p>';
 }
 
-$html .= '<div class="col-md-3">
-          <div class="sf-categories-2 padding-lr-10 equal-col">
-            <div class="icon-bx-md rounded-corner bg-primary margin-b-20 '.$nocaticon.'">
+$html .= '<div class="col-md-4" style="font-family: Open Sans">
+          <div class="sf-categories-2 padding-lr-10 equal-col" style="text-align: left; >
+            <div class="icon-bx-md rounded-corner bg-primary margin-b-20 '.$nocaticon.'" style="text-align: left; margin-bottom: 0px;">
               '.$imgtag.'
 			  <span class="sf-categories-2-count">'.service_finder_getTotalProvidersByCategory( $catdetails->term_id ).'</span>
 			  <a href="'.esc_url(get_term_link( $catdetails )).'" class="sf-category2-link"></a>
             </div>
-            <h4 class="sf-tilte"><a href="'.esc_url(get_term_link( $catdetails )).'">'.esc_html($catdetails->name).'</a></h4>
+            <h4 style="margin-top: 0px; margin-bottom: 16px; font-size: 20px; color: #000;" class="sf-tilte"><a href="'.esc_url(get_term_link( $catdetails )).'">'.esc_html($catdetails->name).'</a></h4>
             '.$excerpt.'
           </div>
         </div>';
@@ -347,21 +347,19 @@ $html .= '<div class="show_more_main_v2" id="show_more_main_v2'.esc_attr($newoff
 $nocaticon = ($catimage == "") ? 'no-cat-icon' : '';
 $imgtag = '';
 if($catimage != ""){
-	  $imgtag = '<img src="'.esc_url($catimage).'" width="80" height="80" alt="'.esc_attr($category->name).'">';
+	  $imgtag = '<img src="'.esc_url($catimage).'" width="80" height="80" alt="'.esc_attr($category->name).'" style="min-width: 64px; min-height: 64px;" >';
 }
 
 $excerpt = '';
 if($showdes == 'yes'){
-	$excerpt = '<p>'.nl2br(service_finder_getExcerpts($category->description,0,60)).'</p>';
+	$excerpt = '<p style="max-width: 296px; height: 86px; font-size: 16px;" >'.nl2br(service_finder_getExcerpts($category->description,0,60)).'</p>';
 }	
-$html .= '<div class="col-md-3">
-          <div class="sf-categories-2 padding-lr-10 equal-col">
-            <div class="icon-bx-md rounded-corner bg-primary margin-b-20 '.$nocaticon.'">
-              '.$imgtag.'
-			  <span class="sf-categories-2-count">'.service_finder_getTotalProvidersByCategory( $category->term_id ).'</span>
-			  <a href="'.esc_url(get_term_link( $category )).'" class="sf-category2-link"></a>
+$html .= '<div class="col-md-4" style="font-family: Open Sans">
+          <div class="sf-categories-2 padding-lr-10 equal-col" style="text-align: left; ">
+            <div class="icon-bx-md rounded-corner bg-primary margin-b-20 '.$nocaticon.'" style="text-align: left; margin-bottom: 0px;">
+              '.$imgtag.'<a href="'.esc_url(get_term_link( $category )).'" class="sf-category2-link"></a>
             </div>
-            <h4><a href="'.esc_url(get_term_link( $category )).'">'.esc_html($category->name).'</a></h4>
+            <h4 style="margin-top: 0px; margin-bottom: 16px; font-size: 20px; color: #000;"><a href="'.esc_url(get_term_link( $category )).'">'.esc_html($category->name).'</a></h4>
             '. $excerpt.'
           </div>
         </div>';

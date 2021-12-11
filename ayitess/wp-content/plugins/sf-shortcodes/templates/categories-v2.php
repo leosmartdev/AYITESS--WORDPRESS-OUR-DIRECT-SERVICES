@@ -25,14 +25,22 @@ $curverightcolor = (!empty($service_finder_options['category-right-curve-color']
 if(service_finder_themestyle_for_plugin() == 'style-2'){
 $html = '<section class="section-full text-center bg-white sf-category2" style="background:url('.esc_url($imgurl).') center '.$bgattachment.' no-repeat;">
   <div class="container">
-    <div class="section-head">
-      <h2 style="color:'.$a['title-color'].'">'.esc_html($a['title']).'</h2>
-	  '.service_finder_title_separator($a['divider-color']).'
-      <p style="color:'.$a['tagline-color'].'">'.esc_html($a['tagline']).'</p>
-    </div>
+    <div class="section-head" style="text-align: left;">
+      <h2 style=" margin-bottom: 16px; color:'.$a['title-color'].'">'.esc_html($a['title']).'</h2>
+      <div style="margin-bottom: 16px; width: 147px; height: 4px; background-color: #163056; border-radius: 4px;">
+      </div>
+    	<p style="width: 420px; margin-left:0px; color:'.$a['tagline-color'].'; font-size: 16px; font-family: Open Sans">'.esc_html($a['tagline']).'</p>
+    ';
+ //    $categories = (!empty($service_finder_options['homepage-categories'])) ? $service_finder_options['homepage-categories'] : '';
+ //    if(!empty($categories)){
+	// 	$totalcat = count($categories);
+	// }
+	// if($totalcat > $a['limit'] && $a['showmore'] == 'yes'){
+    	// $html .= '<div class="show_more_main_v2" id="show_more_main_v2'.esc_attr($limit).'"> <span id="'.esc_attr($category->term_id).'" data-subcat="'.esc_attr($subcategory).'" data-offset="'.esc_attr($limit).'" data-showdes="'.esc_attr($a['showdescription']).'" class="show_more_v2 btn btn-primary" title="Load more categories"><i class="fa fa-refresh"></i> '.esc_html__('Show more','service-finder').'</span> <span class="lodingv2 default-hidden"><span class="loding_txt btn btn-default"><i class="fa fa-refresh fa-spin"></i></span></span> </div>';
+    // }				
+    $html .= '</div>
     <div class="section-content">
       <div class="row catlistv2 equal-col-outer">';
-						
 						if(class_exists('service_finder_texonomy_plugin')){
 						
 						$limit = $a['limit'];
@@ -63,7 +71,7 @@ $html = '<section class="section-full text-center bg-white sf-category2" style="
             $excerpt = '<p>'.nl2br(service_finder_getExcerpts($catdetails->description,0,60)).'</p>';
         }
 		
-        $html .= '<div class="col-md-3">
+        $html .= '<div class="col-md-4">
           <div class="sf-categories-2 padding-lr-10 equal-col">
             <div class="icon-bx-md rounded-corner bg-primary margin-b-20 '.$nocaticon.'">
               '.$imgtag.'
@@ -105,22 +113,20 @@ $html = '<section class="section-full text-center bg-white sf-category2" style="
         $nocaticon = ($catimage == "") ? 'no-cat-icon' : '';
 		$imgtag = '';
 		if($catimage != ""){
-              $imgtag = '<img src="'.esc_url($catimage).'" width="80" height="80" alt="'.esc_attr($category->name).'">';
+              $imgtag = '<img src="'.esc_url($catimage).'" width="80" height="80" alt="'.esc_attr($category->name).'" style="min-width: 64px; min-height: 64px;" >';
         }
 		
 		$excerpt = '';
 		if($a['showdescription'] == 'yes'){
-            $excerpt = '<p>'.nl2br(service_finder_getExcerpts($category->description,0,60)).'</p>';
+            $excerpt = '<p style="max-width: 296px; height: 86px; font-size: 16px;" >'.nl2br(service_finder_getExcerpts($category->description,0,60)).'</p>';
         }
 		
-		$html .= '<div class="col-md-3">
-          <div class="sf-categories-2 padding-lr-10 equal-col">
-            <div class="icon-bx-md rounded-corner bg-primary margin-b-20 '.$nocaticon.'">
-              '.$imgtag.'
-			  <span class="sf-categories-2-count">'.service_finder_getTotalProvidersByCategory( $category->term_id ).'</span>
-			  <a href="'.esc_url(get_term_link( $category )).'" class="sf-category2-link"></a>
+		$html .= '<div class="col-md-4" style="font-family: Open Sans">
+          <div class="sf-categories-2 padding-lr-10 equal-col" style="text-align: left; ">
+            <div class="icon-bx-md rounded-corner bg-primary margin-b-20 '.$nocaticon.'" style="text-align: left; margin-bottom: 0px;">
+              '.$imgtag.'<a href="'.esc_url(get_term_link( $category )).'" class="sf-category2-link"></a>
             </div>
-            <h4><a href="'.esc_url(get_term_link( $category )).'">'.esc_html($category->name).'</a></h4>
+            <h4 style="margin-top: 0px; margin-bottom: 16px; font-size: 20px; color: #000;"><a href="'.esc_url(get_term_link( $category )).'">'.esc_html($category->name).'</a></h4>
             '. $excerpt.'
           </div>
         </div>';
@@ -128,6 +134,7 @@ $html = '<section class="section-full text-center bg-white sf-category2" style="
 								}
 							?>
         <?php if($totalcat > $limit && $a['showmore'] == 'yes'){
+        	$showmore = '<div class="show_more_main_v2" id="show_more_main_v2'.esc_attr($limit).'"> <span id="'.esc_attr($category->term_id).'" data-subcat="'.esc_attr($subcategory).'" data-offset="'.esc_attr($limit).'" data-showdes="'.esc_attr($a['showdescription']).'" class="show_more_v2 btn btn-primary" title="Load more categories"><i class="fa fa-refresh"></i> '.esc_html__('Show more','service-finder').'</span> <span class="lodingv2 default-hidden"><span class="loding_txt btn btn-default"><i class="fa fa-refresh fa-spin"></i></span></span> </div>';
         $html .= '<div class="show_more_main_v2" id="show_more_main_v2'.esc_attr($limit).'"> <span id="'.esc_attr($category->term_id).'" data-subcat="'.esc_attr($subcategory).'" data-offset="'.esc_attr($limit).'" data-showdes="'.esc_attr($a['showdescription']).'" class="show_more_v2 btn btn-primary" title="Load more categories"><i class="fa fa-refresh"></i> '.esc_html__('Show more','service-finder').'</span> <span class="lodingv2 default-hidden"><span class="loding_txt btn btn-default"><i class="fa fa-refresh fa-spin"></i></span></span> </div>';
 							}
 			

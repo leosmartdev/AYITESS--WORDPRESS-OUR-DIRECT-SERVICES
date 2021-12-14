@@ -29,6 +29,7 @@ $titlecolor = (!empty($service_finder_options['shortcode-how-works-title-color']
 $taglinecolor = (!empty($service_finder_options['shortcode-how-works-tagline-color'])) ? esc_html($service_finder_options['shortcode-how-works-tagline-color']) : '';
 $taglinecolor = "#969696";
 $dividercolor = (!empty($service_finder_options['shortcode-how-works-divider-color'])) ? esc_html($service_finder_options['shortcode-how-works-divider-color']) : '';
+$divider_color = '#0A6259';
 if(service_finder_themestyle_for_plugin() == 'style-2'){
 $html = '<section class="section-full text-center bg-white" style="background-image:url('.esc_url($imgurl).');background-attachment: '.$bgattachment.'">
             <div class="container">
@@ -36,7 +37,7 @@ $html = '<section class="section-full text-center bg-white" style="background-im
             	<div class="section-head">
             			<div><span style="color: #FD6F63; font-family: Open Sans;">BEST SERVICES</span></div>
                     <h2 style="color:#323232; font-family: Open Sans; font-size: 40px;">'."How Ayitess Work".'</h2>
-					'.service_finder_title_separator($dividercolor).'
+					'.service_finder_title_separator($divider_color).'
 					<div class="sf-tagile-outer" style="color:'.esc_attr($taglinecolor).'; font-size: 16px; max-width: 420px; overflow-wrap: break-word; font-family: Open Sans;">'.wp_kses_post($tagline).'</div>
                 </div>
                     

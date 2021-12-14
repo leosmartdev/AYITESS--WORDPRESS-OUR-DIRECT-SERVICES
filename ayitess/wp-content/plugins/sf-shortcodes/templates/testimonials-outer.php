@@ -13,7 +13,6 @@
 <?php
 $service_finder_options = get_option('service_finder_options');
 $wpdb = service_finder_shortcode_global_vars('wpdb');
-
 $imgurl = (!empty($service_finder_options['testimonials-bg-image']['url'])) ? $service_finder_options['testimonials-bg-image']['url'] : '';
 $bgattachment = (isset($service_finder_options['testimonials-background-attachment'])) ? esc_html($service_finder_options['testimonials-background-attachment']) : '';
 $bgcolor = (!empty($service_finder_options['testimonials-bg-color'])) ? $service_finder_options['testimonials-bg-color'] : '';
@@ -21,16 +20,16 @@ $bgopacity = (!empty($service_finder_options['testimonials-bg-opacity'])) ? $ser
 $bgopacity = ($bgopacity > 0) ? $bgopacity : ''; 
 $curveleftcolor = (!empty($service_finder_options['testimonials-left-curve-color'])) ? $service_finder_options['testimonials-left-curve-color'] : '';
 $curverightcolor = (!empty($service_finder_options['testimonials-right-curve-color'])) ? $service_finder_options['testimonials-right-curve-color'] : '';
-
-if(service_finder_themestyle_for_plugin() == 'style-2'){
+if(service_finder_themestyle_for_plugin() == 'style-3'){
 
 $html = '<section class="section-full bg-gray sf-testimonials"  style="background-image:url('.esc_url($imgurl).');background-attachment: '.$bgattachment.'">
             <div class="container">
             
-            	<div class="section-head text-center">
-                    <h2 style="color:'.$a['title-color'].'">'.esc_html($a['title']).'</h2>
-					'.service_finder_title_separator($a['divider-color']).'
-                    <p style="color:'.$a['tagline-color'].'">'.esc_html($a['tagline']).'</p >
+            	<div class="section-head text-center" style="text-align: left">
+                    <h2 style="color:'.$a['title-color'].'; margin-bottom: 16px;">'.esc_html($a['title']).'</h2>
+					<div style="margin-bottom: 16px; width: 147px; height: 4px; background-color: #0A6259; border-radius: 4px;">
+                    </div>
+                    <p style="color:'.$a['tagline-color'].'; margin-left: 0px; max-width: 420px; font-size: 16px; font-family: Open Sans">'.esc_html($a['tagline']).'</p >
                 </div>
                     
                 <div class="section-content">
@@ -42,7 +41,7 @@ $html = '<section class="section-full bg-gray sf-testimonials"  style="backgroun
             </div>
 			<div class="sf-overlay-main" style="opacity:'.$bgopacity.'; background-color:'.$bgcolor.'">
         </section>';
-}elseif(service_finder_themestyle_for_plugin() == 'style-3'){
+}elseif(service_finder_themestyle_for_plugin() == 'style-1'){
 ob_start();
 ?>
 <section class="section-full sf-testimonials-wrap" style="background:url(<?php echo esc_url($imgurl) ?>) center <?php echo esc_attr($bgattachment) ?> no-repeat;">

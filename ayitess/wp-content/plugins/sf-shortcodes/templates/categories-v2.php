@@ -29,7 +29,7 @@ $html = '<section class="section-full text-center bg-white sf-category2" style="
       <h2 style=" margin-bottom: 16px; color:'.$a['title-color'].'">'.esc_html($a['title']).'</h2>
       <div style="margin-bottom: 16px; width: 147px; height: 4px; background-color: #163056; border-radius: 4px;">
       </div>
-    	<p style="width: 420px; margin-left:0px; color:'.$a['tagline-color'].'; font-size: 16px; font-family: Open Sans">'.esc_html($a['tagline']).'</p>
+    	<p style="max-width: 420px; margin-left:0px; color:'.$a['tagline-color'].'; font-size: 16px; font-family: Open Sans">'.esc_html($a['tagline']).'</p>
     ';
  //    $categories = (!empty($service_finder_options['homepage-categories'])) ? $service_finder_options['homepage-categories'] : '';
  //    if(!empty($categories)){
@@ -134,8 +134,8 @@ $html = '<section class="section-full text-center bg-white sf-category2" style="
 								}
 							?>
         <?php if($totalcat > $limit && $a['showmore'] == 'yes'){
-        	$showmore = '<div class="show_more_main_v2" id="show_more_main_v2'.esc_attr($limit).'"> <span id="'.esc_attr($category->term_id).'" data-subcat="'.esc_attr($subcategory).'" data-offset="'.esc_attr($limit).'" data-showdes="'.esc_attr($a['showdescription']).'" class="show_more_v2 btn btn-primary" title="Load more categories"><i class="fa fa-refresh"></i> '.esc_html__('Show more','service-finder').'</span> <span class="lodingv2 default-hidden"><span class="loding_txt btn btn-default"><i class="fa fa-refresh fa-spin"></i></span></span> </div>';
-        $html .= '<div class="show_more_main_v2" id="show_more_main_v2'.esc_attr($limit).'"> <span id="'.esc_attr($category->term_id).'" data-subcat="'.esc_attr($subcategory).'" data-offset="'.esc_attr($limit).'" data-showdes="'.esc_attr($a['showdescription']).'" class="show_more_v2 btn btn-primary" title="Load more categories"><i class="fa fa-refresh"></i> '.esc_html__('Show more','service-finder').'</span> <span class="lodingv2 default-hidden"><span class="loding_txt btn btn-default"><i class="fa fa-refresh fa-spin"></i></span></span> </div>';
+        	// $showmore = '<div class="show_more_main_v2" id="show_more_main_v2'.esc_attr($limit).'"> <span id="'.esc_attr($category->term_id).'" data-subcat="'.esc_attr($subcategory).'" data-offset="'.esc_attr($limit).'" data-showdes="'.esc_attr($a['showdescription']).'" class="show_more_v2 btn btn-primary" title="Load more categories"><i class="fa fa-refresh"></i> '.esc_html__('Show more','service-finder').'</span> <span class="lodingv2 default-hidden"><span class="loding_txt btn btn-default"><i class="fa fa-refresh fa-spin"></i></span></span> </div>';
+        $html .= '<div class="show_more_main_v2" id="show_more_main_v2'.esc_attr($limit).'"> <span id="'.esc_attr($category->term_id).'" data-subcat="'.esc_attr($subcategory).'" data-offset="'.esc_attr($limit).'" data-showdes="'.esc_attr($a['showdescription']).'" class="show_more_v2 btn btn-primary" title="Load more categories" style= "background-color:#EF3C55; border-radius: 4px; width: 153px; height: 56px; padding-top: 17px;" > '.esc_html__('See more','service-finder').' <i class="fa fa-arrow-right"></i></span> <span class="lodingv2 default-hidden"><span class="loding_txt btn btn-default"><i class="fa fa-refresh fa-spin"></i></span></span> </div>';
 							}
 			
 							}

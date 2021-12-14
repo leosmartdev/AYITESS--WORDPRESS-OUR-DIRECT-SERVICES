@@ -175,14 +175,16 @@ wp_reset_query();
 
 <?php
 if(service_finder_themestyle_for_plugin() == 'style-2'){
-$html = '<section class="section-full latest-blog" style="background-image:url('.esc_url($imgurl).');background-attachment: '.$bgattachment.'">
+    $bgcolor = '#163056';
+    $title_color = '#FFF';
+    $tagline_color = '#FFF';
+    $divider_color = '#FFF';
+$html = '<section class="section-full latest-blog" style="background-image:url('.esc_url($imgurl).');background-attachment: '.$bgattachment.'; padding-top: 35.74px; padding-bottom: 44.97px;">
             <div class="container">
-            
-            
             	<div class="section-head text-center">
-                    <h2 style="color:'.$a['title-color'].'">'.esc_html($a['title']).'</h2>
-					'.service_finder_title_separator($a['divider-color']).'
-                    <p style="color:'.$a['tagline-color'].'">'.esc_html($a['tagline']).'</p>
+                    <h2 style="color:'.$title_color.'">'.esc_html($a['title']).'</h2>
+					'.service_finder_title_separator($divider_color).'
+                    <p style="color:'.$tagline_color.'">'.esc_html($a['tagline']).'</p>
                 </div>
                     
                 <div class="section-content">
@@ -195,7 +197,7 @@ $html = '<section class="section-full latest-blog" style="background-image:url('
                 
             </div>
 			<div class="sf-overlay-main" style="opacity:'.$bgopacity.'; background-color:'.$bgcolor.'">
-        </section>';
+    </section>';
 }elseif(service_finder_themestyle_for_plugin() == 'style-3'){
 ob_start();
 ?>

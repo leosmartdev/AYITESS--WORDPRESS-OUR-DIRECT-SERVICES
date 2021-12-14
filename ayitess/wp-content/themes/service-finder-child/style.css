@@ -251,7 +251,7 @@ Text Domain:  servicefinderchild
      width: 136px;
      height: 4px;
      border-radius: 2px;
-     background-color: #0A6259 !important;
+     background-color: #0A6259;
      position: absolute;
      top: 10px;
  }
@@ -3955,14 +3955,20 @@ background-color:#ffffff; }
  	clear:both;
  	margin:0 -15px;
  	border-bottom:1px solid #E9E9E9;
-    background-color:#FFFFFF;  }
+    /*background-color:#FFFFFF;  */
+    background-color: cornflowerblue;  
+}
  .header-nav .nav{
  	float:none;
  	margin:0;
- 	background-color:#FFFFFF;  }
+ 	/*background-color:#FFFFFF;  */
+     background-color:cornflowerblue;  
+ }
  .header-nav .extra-nav{
- 	background-color:#FFFFFF;  } 
- 
+ 	/*background-color:#FFFFFF;  */
+     background-color:cornflowerblue;  
+ } 
+.header-style7 .extra-nav .extra-cell a.btn { margin-top: 0px;}
  
  .header-nav .nav li {
  	float:none;
@@ -4490,22 +4496,22 @@ Nav left slide css
  } 
  
 .sf-header-inner > .main-bar {
-	background: #FFFFFF;
+	background: #163056;
 }
-.sf-header-inner.is-sticky > .main-bar {  position: fixed;  background: #FFFFFF;  margin-top: 0;}
+.sf-header-inner.is-sticky > .main-bar {  position: fixed;  background: #163056;  margin-top: 0; color: #FFFFFF;}
 .sf-header-inner.is-sticky .header-nav .nav > li > a,
 .sf-header-inner.is-sticky .nav > li.menu-item-has-children:before {
-     color: #555555;
+     /*color: #555555;*/
 }
  
-.sf-header-inner .extra-nav .extra-cell a.btn { background-color: transparent; color: #555555; border: 2px solid #555555; margin-left: 5px; margin-right: 5px; padding: 4px 10px; }
+.sf-header-inner .extra-nav .extra-cell a.btn { background-color: transparent; color: #ffffff; border: 2px solid #ffffff; margin-left: 5px; margin-right: 5px; padding: 14px 31.5px; border-radius: 4px; margin-top: -8px; }
  
 .sf-header-inner.is-sticky .extra-nav .extra-cell a.btn {  background-color: transparent;  color: #FFFFFF;  border: 2px solid #FFFFFF; }  
  
 .sf-header-inner .header-nav .nav > li {  font-weight: normal; }
  
-.sf-header-inner .header-nav .nav > li > a { color: #555555;
- font-size: 12px; }
+.sf-header-inner .header-nav .nav > li > a { color: #ffffff;
+ font-size: 16px; }
 .sf-header-inner .nav > li.menu-item-has-children:before { color: #555555; }     
      
  .sf-header-inner .header-nav .nav > li > a:hover  { color: #3396D1; }
@@ -4516,7 +4522,7 @@ Nav left slide css
  
  .sf-header-inner .header-nav .nav > li:hover > a,
  .sf-header-inner .nav > li:hover.menu-item-has-children:before,
-  .sf-header-inner.is-sticky .nav > li:hover.menu-item-has-children:before { color: #3396D1!important; }
+  .sf-header-inner.is-sticky .nav > li:hover.menu-item-has-children:before { color: #EF3C55!important; }
  
  .sf-header-inner .header-nav .nav > li .sub-menu { background-color: #FFFFFF; }
  .sf-header-inner .header-nav .nav > li .sub-menu li { font-weight: normal;}
@@ -4576,17 +4582,16 @@ Nav left slide css
  .sf-bnr-text strong {
      display: block;
      font-weight:700; font-size:60px; line-height:80px; color:#ffffff;  
-     margin-left: -100px;
      overflow-wrap: break-word;
-     width: 555px;
+     width: 45%;
      text-align: left;
     }
  .sf-bnr-text span {
      font-family:Raleway; font-weight:400; font-size:16px; line-height:32px; color:#ffffff;  
      overflow-wrap: break-word;
      max-width: 518px;
+     width: 50%;
      display: block;
-     margin-left: -100px;
      text-align: left;
     }
  @media only screen and (max-width: 1440px) {
@@ -4796,9 +4801,9 @@ Nav left slide css
  .sf-find-bar .type-address .form-control,
  .sf-find-bar-inr .type-address .form-control {
      border-color: #fff;
-     width : 169px;
+     /*width : 169px;*/
      /* height: 61px; */
-     border-radius: 4px;
+     /*border-radius: 4px;*/
      /* display: none; */
  }
 
@@ -5929,7 +5934,7 @@ Nav left slide css
  }
  .footer-1-col .widget-title::after { margin-left:auto; margin-right:auto; }
  .footer-top {
-     background: #4F5559;
+     background: #EF3C55;
      background-size: cover;
      background-position: center;
      padding: 50px 0;
@@ -6436,20 +6441,20 @@ Nav left slide css
  }
  .testimonial-text strong {
      font-size: 16px;
-     color: #3396d1;
+     color: #000;
      display: inline-block;
      position: relative;
      margin-right: 5px;
  }
  .testimonial-text strong:after {
-     content: "/";
+     content: "";
      color: #333;
      margin-left: 3px;
  }
  .testimonial-text span {
      font-size: 14px;
      color: #333333;
-     font-style: italic;
+     font-style: inherit;
  }
  @media only screen and (max-width: 480px) {
      .testimonial-bx {
@@ -6601,17 +6606,75 @@ Nav left slide css
      display: block;
  }
 .sf-providers-follow-img {
-     width: 583px;
-     height: 582px;
+     width: 150%;
+     /*height: 100%;*/
      background-image: url(inc/images/background/bg6.png);
-     border-radius: 300px 0px 0px 0px;
+     border-radius: 50% 0% 0% 0%;
 }
 
+.footer-logo{
+     background-image: url(inc/images/background/logo2.png);
+     background-repeat: no-repeat;
+     background-size: contain;
+     width: 131px;
+     height: 97px;
+}
+
+.mobile-img {
+     /*width: 150%;*/
+     height: 50vh;
+     margin-left: 18%;
+     /*padding-left: 20%;*/
+     /*height: 100%;*/
+     background-image: url(inc/images/background/mobile.png);
+     background-repeat: no-repeat;
+}
+
+.social-link-icon {
+     text-align: center;
+     padding-top: 8px;
+     font-size: 16px;
+     color: #EF3C55; 
+     width:32px; 
+     height:32px; 
+     background-color: #ffffff; 
+     border-radius: 50%; 
+     margin-left: 10px;
+}
+
+.apple-img {
+     background-image: url(inc/images/background/apple.png);
+     background-repeat: no-repeat;
+     background-size: contain;
+     width: 40%;
+     height: 15vh;
+     display: block;
+     margin: 0 auto;
+     text-indent: -9999px
+}
+
+.google-img {
+     background-image: url(inc/images/background/google.png);
+     background-repeat: no-repeat;
+     background-size: contain;
+     width: 43%;
+     height: 15vh;
+     display: block;
+     margin: 0 auto;
+     text-indent: -9999px
+}
+
+
+.sf-provider-container {
+     display: flex; 
+     font-family: Open Sans;
+} 
+
 .sf-providers-follow-radius-rectangle {
-     width: 102px;
-     height: 102px;
+     width: 15%;
+     height: 15%;
      background-color: #EF3C55;
-     border-radius: 0px 0px 1000px 0px;     
+     border-radius: 0% 0% 100% 0%;     
 }
 
  /*== > provider box thum height manage ==*/
@@ -6631,8 +6694,23 @@ Nav left slide css
      .sf-listing-grid-3 .sf-thum-bx {
          min-height: 220px;
      }
+     .sf-provider-container {
+          display: block; 
+          font-family: Open Sans;
+     } 
+/*     .sf-providers-follow-img {
+         display: none;
+     }*/
+
  }
  @media only screen and (max-width: 991px) {
+     .sf-provider-container {
+          display: block; 
+          font-family: Open Sans;
+     } 
+     /*.sf-providers-follow-img {
+         display: none;
+     }*/
      .sf-listing-grid-4 .sf-thum-bx {
          min-height: 259px;
      }

@@ -286,7 +286,7 @@ jQuery(document).ready(function() {
 	});	
    jQuery('.owl-carousel').owlCarousel({
 		rtl:rtloption,
-		items:2,									   
+		items:3,									   
 		loop:false,
 		margin:0,
 		dots: false,
@@ -298,7 +298,7 @@ jQuery(document).ready(function() {
 				items:1
 			},
 			1000:{
-				items:2
+				items:3
 			}
 		}
 	})

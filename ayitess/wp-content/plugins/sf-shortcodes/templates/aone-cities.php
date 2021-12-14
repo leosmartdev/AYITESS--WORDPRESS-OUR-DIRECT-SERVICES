@@ -56,7 +56,6 @@ if($country != '')
 }
 $cities = get_terms( $args );
 
-
 ob_start();
 ?>
 <section class="section-full sf-populerCities-wrap" style="background:url(<?php echo esc_url($imgurl) ?>) center <?php echo esc_attr($bgattachment) ?> no-repeat;">

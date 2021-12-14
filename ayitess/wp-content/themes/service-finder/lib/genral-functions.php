@@ -57,15 +57,28 @@ $footerlayout = (!empty($service_finder_options['footer-layout'])) ? $service_fi
         <?php if($footerlayout == 'col-4' || !class_exists( 'ReduxFrameworkPlugin' )){ ?>
 
         <!-- 4 Colomn footer -->
-
         <div class="col-md-3 col-sm-3 col-xs-6 footer-4-col">
+        	<div class="footer-logo">
+        	</div>
+        	<br>
+        	<div>
+        		<p>Professional housecleaning services, you want to make sure that you find a team that can accommodate your schedule, and cleaning preferences.</p>
+        	</div>
+        	<div class="other-links">
+        		<?php echo (!empty($service_finder_options['fb-link'])) ? '<a href="'.esc_url($service_finder_options['fb-link']).'" class="fa fa-facebook social-link-icon" target="_blank" style="color:#EF3C55;"></a>' : ''; ?> 
+
+				<?php echo (!empty($service_finder_options['instagram-link'])) ? '<a href="'.esc_url($service_finder_options['instagram-link']).'" class="fa fa-instagram social-link-icon" target="_blank" style="color:#EF3C55;"></a>' : ''; ?> 
+
+				<?php echo (!empty($service_finder_options['twitter-link'])) ? '<a href="'.esc_url($service_finder_options['twitter-link']).'" class="fa fa-twitter social-link-icon" target="_blank" style="color:#EF3C55;"></a>' : ''; ?> 
+
+				<?php echo (!empty($service_finder_options['youtube-link'])) ? '<a href="'.esc_url($service_finder_options['youtube-link']).'" class="fa fa-youtube social-link-icon" target="_blank" style="color:#EF3C55;"></a>' : ''; ?>
+        	</div>
 
           <?php 
 
 		  if ( is_active_sidebar( 'sf-sidebar-footer-1' ) ) {
 
-		  	dynamic_sidebar('sf-sidebar-footer-1');
-
+		  	// dynamic_sidebar('sf-sidebar-footer-1');
 		  }
 
 		  ?>
@@ -73,12 +86,14 @@ $footerlayout = (!empty($service_finder_options['footer-layout'])) ? $service_fi
         </div>
 
         <div class="col-md-3 col-sm-3 col-xs-6 footer-4-col">
-
+        	<div class="footer-menu-links">
+        		
+        	</div>
           <?php 
 
 		  if ( is_active_sidebar( 'sf-sidebar-footer-2' ) ) {
 
-		  	dynamic_sidebar('sf-sidebar-footer-2');
+		  	// dynamic_sidebar('sf-sidebar-footer-2');
 
 		  }
 
@@ -86,15 +101,17 @@ $footerlayout = (!empty($service_finder_options['footer-layout'])) ? $service_fi
 
         </div>
 
-        <div class="footer-clear default-hidden"></div>
+        <!-- <div class="footer-clear default-hidden"></div> -->
 
         <div class="col-md-3 col-sm-3 col-xs-6 footer-4-col">
-
+        	<div class="footer-about">
+        		
+        	</div>
           <?php 
 
 		  if ( is_active_sidebar( 'sf-sidebar-footer-3' ) ) {
 
-		  	dynamic_sidebar('sf-sidebar-footer-3');
+		  	// dynamic_sidebar('sf-sidebar-footer-3');
 
 		  }
 
@@ -103,12 +120,25 @@ $footerlayout = (!empty($service_finder_options['footer-layout'])) ? $service_fi
         </div>
 
         <div class="col-md-3 col-sm-3 col-xs-6 footer-4-col">
+        	<div class="footer-ouroffice">
+        		<div>
+        			<h3>Our Office</h3>
+        		</div>
+        		<div>
+        			<p>Indonesia</p>
+        			<p>Jl. Griya Permata Hijau no D1 Purwomartani Kalasan 543881</p>
+        		</div>
+        		<div>
+        			<p>Tokyo</p>
+        			<p>35 Mandalay Road 13–37 Mandalay Towers Singapore 308215</p>
+        		</div>
+        	</div>
 
           <?php 
 
 		  if ( is_active_sidebar( 'sf-sidebar-footer-4' ) ) {
 
-		  	dynamic_sidebar('sf-sidebar-footer-4');
+		  	// dynamic_sidebar('sf-sidebar-footer-4');
 
 		  }
 

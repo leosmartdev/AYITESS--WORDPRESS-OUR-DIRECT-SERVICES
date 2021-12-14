@@ -245,9 +245,9 @@ $socialloginclass = 'sf-other-login-one';
                   <div class="col-md-6">
                     <div class="form-group has-select">
                       <?php
-                      $readonly = 'readonly="readonly"';
-					  $disabled = 'disabled="disabled"';
-					  $placeholder = esc_html__('City (Select country to enable)','service-finder');
+       //                $readonly = 'readonly="readonly"';
+					  // $disabled = 'disabled="disabled"';
+					  // $placeholder = esc_html__('City (Select country to enable)','service-finder');
 					  ?>
                       <select class="sf-select-box form-control" name="signup_country" data-live-search="true" title="<?php esc_html_e('Country', 'service-finder'); ?>" id="signup_country">
                       <option value="">

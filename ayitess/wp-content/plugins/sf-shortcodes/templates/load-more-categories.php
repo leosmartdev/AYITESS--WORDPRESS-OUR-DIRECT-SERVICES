@@ -256,7 +256,6 @@ global $service_finder_options;
 
 		$html = '';
 		if(service_finder_themestyle_for_plugin() == 'style-2'){
-		
 		//If admin selected categories display of home page else all categories show on show page
 		$catarr = (!empty($_POST['catarr'])) ? $_POST['catarr'] : '';
 		$showdes = (!empty($_POST['showdes'])) ? $_POST['showdes'] : '';
@@ -290,7 +289,7 @@ if($catimage != ""){
 $excerpt = '';
 
 if($showdes == 'yes'){
-	$excerpt = '<p> style="max-width: 296px; height: 86px; font-size: 16px;" '.nl2br(service_finder_getExcerpts($catdetails->description,0,60)).'</p>';
+	$excerpt = '<p> style="max-width: 296px; max-height: 86px; font-size: 16px;" '.nl2br(service_finder_getExcerpts($catdetails->description,0,60)).'</p>';
 }
 
 $html .= '<div class="col-md-4" style="font-family: Open Sans">

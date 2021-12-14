@@ -38,7 +38,7 @@ $args = array(
 $the_query = new WP_Query( $args );
 
 
-if(service_finder_themestyle_for_plugin() == 'style-2'){
+if(service_finder_themestyle_for_plugin() == 'style-1'){
 ob_start();
 ?>
 <section class="section-full bg-gray sf-testimonials" style="background:url(<?php echo esc_url($imgurl) ?>) center <?php echo esc_attr($bgattachment) ?> no-repeat;">
@@ -147,12 +147,19 @@ $html = ob_get_clean();
 }else{
 ob_start();
 ?>
+<?php 
+    $title = 'What Our Client Say’s';
+    $tagline = 'This is what clients have been saying after using the great service we do for clients.';
+
+?>
 <section class="section-full bg-gray sf-testimonials" style="background:url(<?php echo esc_url($imgurl) ?>) center <?php echo esc_attr($bgattachment) ?> no-repeat;">
   <div class="container">
-    <div class="section-head text-center ">
+    <div class="section-head text-center " style="text-align: left;">
       <h2 style="color:<?php echo esc_attr($titlecolor); ?>"><?php echo esc_html($title); ?></h2>
-	  <?php echo service_finder_title_separator($dividercolor); ?>
-      <div class="sf-tagile-outer" style="color:<?php echo esc_attr($taglinecolor); ?>"><?php echo wp_kses_post($tagline); ?></div>
+      <div style="margin-bottom: 16px; width: 147px; height: 4px; background-color: #0A6259; border-radius: 4px;">
+      </div>
+	  <?php //echo service_finder_title_separator($dividercolor); ?>
+      <div class="sf-tagile-outer" style="margin-left: 0px; max-width: 420px; color:<?php echo esc_attr($taglinecolor); ?>"><?php echo wp_kses_post($tagline); ?></div>
     </div>
     <div class="section-content">
       <div class="section-content">
@@ -167,11 +174,25 @@ ob_start();
 		$imgsrc = '';
 		}
 		?>
+
         <div class="testimonial-bx item">
-          <div class="testimonial-pic"><img src="<?php echo esc_url($imgsrc); ?>" width="100" height="100" alt=""></div>
-          <div class="testimonial-text">
+          
+          <div class="testimonial-text" style="margin-left: 0px;">
             <?php echo apply_filters('the_content', get_the_content()); ?>
-            <div class="testimonial-detail"><strong><?php echo get_post_meta($postid,'authorname',true); ?></strong><span><?php echo get_post_meta($postid,'designation',true); ?></span></div>
+            <div class="testimonial-detail" style="display: flex;">
+                <div class="" style="display: inline-block;">
+                    <img src="<?php echo esc_url($imgsrc); ?>" width="50" height="50" alt="" style="max-width: 50px; max-height: 50px; border-radius: 50%;">
+                </div>
+                <div style="display: inline-block; padding: 15px;">
+                    <strong>
+                        <?php echo get_post_meta($postid,'authorname',true); ?>
+                    </strong>
+                    <br>
+                    <span>
+                        <?php echo get_post_meta($postid,'designation',true); ?>
+                    </span>
+                </div>
+            </div>
           </div>
         </div>
 		<?php

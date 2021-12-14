@@ -456,7 +456,6 @@ function service_finder_register_shortcodes() {
 			   'divider-color' => '',
 			   
 			), $atts );
-			
 			$fromthemeoption = service_finder_manage_shortcode();
 			if($fromthemeoption == 'yes' || service_finder_check_new_client_for_shortcode())
 			{
@@ -470,6 +469,40 @@ function service_finder_register_shortcodes() {
 	}
 	add_shortcode( 'Show-Testimonials', 'service_finder_testimonials_outer' );
 	
+		/*Request Quote Form*/
+	function service_finder_download_app($atts, $content = null)
+	{
+			global $wpdb, $service_finder_options;
+			ob_start();
+			$a = shortcode_atts( array(
+	
+			   'title' => '',
+	
+			   'tagline' => '',
+			   
+			   'title-color' => '',
+			   
+			   'tagline-color' => '',
+			   
+			   'divider-color' => '',
+			   
+			), $atts );
+			// $fromthemeoption = service_finder_manage_shortcode();
+			// if($fromthemeoption == 'yes' || service_finder_check_new_client_for_shortcode())
+			// {
+			// 	require plugin_dir_path(__FILE__) . '/aone-downloads.php';
+			// }else{
+				require plugin_dir_path(__FILE__) . '/aone-downloads.php';
+			// }
+			
+			print_r($html);
+			return ob_get_clean();
+	}
+	add_shortcode( 'Download-App', 'service_finder_download_app' );
+
+
+
+
 	function service_finder_testimonials_inner($atts, $content = null)
 	{
 			global $wpdb, $service_finder_options;
@@ -517,12 +550,15 @@ function service_finder_register_shortcodes() {
 			), $atts );
 			
 			$fromthemeoption = service_finder_manage_shortcode();
-			if($fromthemeoption == 'yes' || service_finder_check_new_client_for_shortcode())
-			{
-				require plugin_dir_path(__FILE__) . '/aone-latest-blogs.php';
-			}else{
+			// var_dump($fromthemeoption);
+			// var_dump(service_finder_check_new_client_for_shortcode());
+			// exit;
+			// if($fromthemeoption == 'yes' || service_finder_check_new_client_for_shortcode())
+			// {
+			// 	require plugin_dir_path(__FILE__) . '/aone-latest-blogs.php';
+			// }else{
 				require plugin_dir_path(__FILE__) . '/latest-blogs.php';
-			}
+			// }
 			
 			print_r($html);
 			return ob_get_clean();
@@ -899,5 +935,7 @@ function service_finder_register_shortcodes() {
 			return ob_get_clean();
 	}
 	add_shortcode( 'request-quote', 'service_finder_request_quote' );
+
+
 	
 } 

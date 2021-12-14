@@ -120,18 +120,22 @@ $bgopacity = 1;
 $content_first = "GET YOUR PLACE CLEANED. IT’S SIMPLE";
 $button_color = "#EF3C55";
 $content = "We make the cleaning experience easier for you our goal is to make cleaning enjoyable again, and to give you your free time back so that you can concentrate on what’s important.";
-$html = '<div class="section-full sf-overlay-wrapper text-center providers-follow" style="padding-top: 39.54px; padding-bottom: 41.43px; background-color: '. $bgcolor . ';">
-  <div class="container" style="display: flex; font-family: Open Sans;">
+$html = '<div class="section-full sf-overlay-wrapper text-center providers-follow" style="padding-top: 3%; padding-bottom: 5%; background-color: '. $bgcolor . ';">
+  <div class="container sf-provider-container">
     <div id = "follow_img" class= "sf-providers-follow-img">
         <div class = "sf-providers-follow-radius-rectangle"></div>
     </div>
-    <div class="w-t-element" style="padding-left: 81px; padding-top: 104.67px; display: flex; flex-direction: column; float: right;">
+    <div class="w-t-element" style="padding-left: 15%; padding-top: 5%; display: flex; flex-direction: column; float: left;">
         <div style="text-align: left; float:right;font-size:16px; ">' . $content_first . '</div>
         <div style="float:right; width: 432.81px;"> <strong class="sf-title" style="font-size: 40px; text-align:left; color:'.esc_attr($followerstextcolor).'">'.str_replace("%TOTAL-PROVIDERS%",'<span>'.$total.'</span>',$title).'</strong>
         </div>
-        <div class="sf-follow-text" style="padding:0; font-size: 16px; text-align:left; float: right; width: 486px; color:'.esc_attr($followerstextcolor).'">'.$content.'</div>
-        <div style="text-align: left; padding-top: 123px;">
-            <input type="button" value="Learn More ->" style="border: none; background-color:'.$button_color.'; width: 170px; height: 56px; border-radius: 4px;">
+        <div style="margin-bottom: 16px; width: 147px; height: 4px; background-color: #fff; border-radius: 4px;">
+        </div>
+        <div class="sf-follow-text" style="padding:0; font-size: 16px; text-align:left; float: right; width: 90%; color:'.esc_attr($followerstextcolor).'">'.$content.'</div>
+        <div style="text-align: left; padding-top: 20%;">
+            <span>
+                <input type="button" value="Learn More &#xf061;" style="border: none; background-color:'.$button_color.'; width: 170px; height: 56px; border-radius: 4px; font-family: FontAwesome;">
+            </span>
         </div>
     </div>
   </div>

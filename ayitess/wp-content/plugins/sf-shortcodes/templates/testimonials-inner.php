@@ -15,19 +15,23 @@ if(service_finder_themestyle_for_plugin() == 'style-2'){
 
 $html = '<div class="sf-testimonial-2 item" data-hash="zero">
                                 <div class="testimonial-thum">
-								<a class="item-thum" href="javascript:;"><img src="'.esc_url($a['avatar']).'" alt=""></a>
 								</div>
 								<div class="sf-testimonial-text quote-right quote-left">
                                     <p>'.$content.'</p>
                                 </div>
-                                <div class="sf-testimonial-detail">
-                                    <strong class="testimonial-name">'.esc_html($a['name']).'</strong>
-                                    <span class="testimonial-position">'.esc_html($a['designation']).'</span>
+                                <div class="sf-testimonial-detail" style="display: inline-block">
+                                    <div>
+    								    <a class="item-thum" href="javascript:;"><img src="'.esc_url($a['avatar']).'" alt="avatar"></a>
+                                    </div>
+                                    <div>
+                                        <strong class="testimonial-name">'.esc_html($a['name']).'</strong>
+                                        <span class="testimonial-position">'.esc_html($a['designation']).'</span>
+                                    </div>
                                 </div>
                                 
                             </div>';
 
-}elseif(service_finder_themestyle_for_plugin() == 'style-3'){
+}elseif(service_finder_themestyle_for_plugin() == 'style-1'){
 ob_start();
 ?>
 <div class="item">

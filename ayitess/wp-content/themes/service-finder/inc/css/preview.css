@@ -5618,7 +5618,7 @@ Nav left slide css
     color: #FFFFFF;
  }
  #footer {
-     font-size: 13px;
+     font-size: 16px;
  }
  footer a,
  footer a:visited {
@@ -5627,7 +5627,7 @@ Nav left slide css
  footer a:active,
  footer a:focus,
  footer a:hover {
-     color: #3396D1;
+     color: #163056;
  }
  footer#footer {
      background-position: center;
@@ -5714,7 +5714,7 @@ Nav left slide css
  #footer .widget_service_finder_providers_cities li {
      position: relative;
      padding: 10px 10px 10px 15px;
-     border-bottom: 1px dashed #898787;
+     border-bottom: 1px dashed #EF3C55;
      color: #FFF;
  }
  #footer .widget_categories li:last-child,
@@ -5906,7 +5906,7 @@ Nav left slide css
  }
  .footer-1-col .widget-title::after { margin-left:auto; margin-right:auto; }
  .footer-top {
-     background: #4F5559;
+     background: #EF3C55;
      background-size: cover;
      background-position: center;
      padding: 50px 0;
@@ -5920,7 +5920,7 @@ Nav left slide css
      color: #FFFFFF;
  }
  .footer-bottom {
-     background: #3B4044;
+     background: #EF3C55;
      padding: 30px 0;
      color: #FFFFFF;
  }
@@ -11649,13 +11649,13 @@ Nav left slide css
  @media only screen and (max-width: 767px) { 
  .col-md-3:last-child .sf-company-satus2 { margin-bottom:0px; }
  }
- .sf-footer-light .footer-top { background: #4F5559; }
+ .sf-footer-light .footer-top { background: #EF3C55; }
  .sf-footer-light p {  color: #FFFFFF; }
  .sf-footer-light h1, .sf-footer-light h2, .sf-footer-light h3, .sf-footer-light h4, .sf-footer-light h5, .sf-footer-light h6 {
       color: #FFFFFF;
  }
  .sf-footer-light .footer-bottom { 
- 	background: #3B4044;
+ 	background: #EF3C55;
      padding: 30px 0;
      color: #FFFFFF;
  	position:relative;}

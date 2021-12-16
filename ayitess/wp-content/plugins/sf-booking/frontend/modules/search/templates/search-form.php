@@ -52,8 +52,11 @@ $arrowclass = 'fa-chevron-down';
 
 $html = '';
 $searchoptions = array();
-if($service_finder_options['search-keyword']){
-	$searchoptions[] = $service_finder_options['search-keyword'];
+// if($service_finder_options['search-keyword']){
+// 	$searchoptions[] = $service_finder_options['search-keyword'];
+// }
+if($service_finder_options['search-address']){
+	$searchoptions[] = $service_finder_options['search-address'];
 }
 if($service_finder_options['search-category']){
 	$searchoptions[] = $service_finder_options['search-category'];
@@ -64,15 +67,12 @@ if($service_finder_options['search-country']){
 if($service_finder_options['search-city']){
 	$searchoptions[] = $service_finder_options['search-city'];
 }
-if($service_finder_options['search-state']){
-	$searchoptions[] = $service_finder_options['search-state'];
-}
-if($service_finder_options['search-zipcode']){
-	$searchoptions[] = $service_finder_options['search-zipcode'];
-}
-if($service_finder_options['search-address']){
-	$searchoptions[] = $service_finder_options['search-address'];
-}
+// if($service_finder_options['search-state']){
+// 	$searchoptions[] = $service_finder_options['search-state'];
+// }
+// if($service_finder_options['search-zipcode']){
+// 	$searchoptions[] = $service_finder_options['search-zipcode'];
+// }
 $optionsfields = count($searchoptions) + 1;
 switch($optionsfields){
 case 2:
@@ -117,13 +117,13 @@ $html = '<form class="clearfix search-providers" method="get" action="'.home_url
   }
   $singleboxclass = ($optionsfields == 2) ? 'sf-single-inputbox' : ''; 
   $html .= '<div class="sf-search-form-element '.sanitize_html_class($singleboxclass).'">';
-  if($service_finder_options['search-keyword']):
-  $html .= '<div class="'.$fieldclass.'">
-    <div class="type-address">
-      <input type="text" value="'.esc_attr($keyword).'" placeholder="'.esc_html__('Keyword', 'service-finder').'" id="keyword" name="keyword" class="form-control sf-form-control">
-    </div>
-  </div>';
-  endif;
+  // if($service_finder_options['search-keyword']):
+  // $html .= '<div class="'.$fieldclass.'">
+  //   <div class="type-address">
+  //     <input type="text" value="'.esc_attr($keyword).'" placeholder="'.esc_html__('Keyword', 'service-finder').'" id="keyword" name="keyword" class="form-control sf-form-control">
+  //   </div>
+  // </div>';
+  // endif;
   if($service_finder_options['search-address']){
   $autolocation = '';
   if($service_finder_options['auto-location-detect']){
@@ -597,9 +597,10 @@ $html = '<form class="clearfix search-providers" method="get" action="'.home_url
   $html .= ob_get_clean();
   }
   $btnclass = (service_finder_themestyle() == 'style-2') ? 'btn-search-result' : '';
+  $searchbtntext = "search";
   $html .= '<div class="'.$submitclass.'">
     <div class="type-search">
-      <input type="submit" value="'.esc_html($searchbtntext).'" class="btn btn-block btn-primary '.sanitize_html_class($btnclass).'">
+      <input type="submit" value="'.esc_html($searchbtntext).'" class="btn btn-block btn-primary '.sanitize_html_class($btnclass).'" style = "background-color: #EF3C55; border-radius: 4px;">
     </div>
   </div>';
   

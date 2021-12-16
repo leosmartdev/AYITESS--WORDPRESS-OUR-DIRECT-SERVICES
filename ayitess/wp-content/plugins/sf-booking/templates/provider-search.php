@@ -12,6 +12,7 @@
 get_header(); 
 
 $service_finder_options = get_option('service_finder_options');
+// print_r($service_finder_options); exit;
 $wpdb = service_finder_plugin_global_vars('wpdb');
 ?>
 <?php 

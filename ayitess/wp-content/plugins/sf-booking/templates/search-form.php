@@ -8,6 +8,8 @@
 *
 ******************************************************************************/
 $service_finder_options = get_option('service_finder_options');
+// print_r($service_finder_options); exit;
+
 $wpdb = service_finder_plugin_global_vars('wpdb');
 $service_finder_Tables = service_finder_plugin_global_vars('service_finder_Tables');
 $searchAddress = (isset($_REQUEST['searchAddress'])) ? $_REQUEST['searchAddress'] : '';

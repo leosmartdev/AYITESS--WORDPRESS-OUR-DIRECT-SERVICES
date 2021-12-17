@@ -59,13 +59,15 @@ $html = '<section class="section-full text-center bg-white" style="background-im
 						$stepcontent = (!empty($service_finder_options['shortcode-how-works-step'.$i.'-content'])) ? wp_kses_post($service_finder_options['shortcode-how-works-step'.$i.'-content']) : '';
 						$stepnumber = (!empty($service_finder_options['shortcode-how-works-step'.$i.'-number'])) ? esc_html($service_finder_options['shortcode-how-works-step'.$i.'-number']) : '';
 						$stepicon = (!empty($service_finder_options['shortcode-how-works-step'.$i.'-icon']['url'])) ? $service_finder_options['shortcode-how-works-step'.$i.'-icon']['url'] : '';
+						// var_dump($_SERVER["DOCUMENT_ROOT"]); exit;
+						$stepicon = "/wp-content/uploads/2021/12/how-it-work".$i.".png";
 						$boxwidth = ($boxcnt == 2) ? 'col-md-6' : 'col-md-4';
 						if($show == true)
 						{
 						$html .= '<div class="'.esc_attr($boxwidth).'">
                           <div class="sf-how-work padding-lr-40 equal-col">
                                 <div class="sf-icon-xl margin-b-20" style="display: flex">
-                                    <img src="'.esc_url($stepicon).'" width="139" height="140" alt="">
+                                    <img src="'.$stepicon.'" width="139" height="140" alt="">
                                 </div>
                                 <h4 class="sf-tilte" style="text-align:left; color:'.esc_attr($taglinecolor).'">'.esc_html($steptitle).'</h4>
                                 <p style="text-align:left; color:'.esc_attr($taglinecolor).'">'.$stepcontent.'</p>
